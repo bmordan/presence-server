@@ -3,6 +3,8 @@ Meteor.methods({
 })
 
 function macmessage(mac,ts,status){
-  console.log(mac,ts,status)
+  console.log('Inmates.insert')
+  console.log('mac:'+mac,'ts:'+ts,'status:'+status)
   Inmates.insert({'mac': mac,'ts':ts,'status':status})
+  return 'finished'
 }
