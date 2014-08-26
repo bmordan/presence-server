@@ -1,1 +1,0 @@
-Inmates = new Meteor.Collection('inmates')

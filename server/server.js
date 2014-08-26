@@ -1,6 +1,9 @@
 Meteor.publish('inmates', function(){
   return Inmates.find({})
 })
+Meteor.publish('visitors', function(){
+  return Visitors.find({})
+})
 
 Meteor.startup(function () {
   Inmates.allow({
@@ -17,6 +20,20 @@ Meteor.startup(function () {
     //   if(!userId) return false
     // }
   })
+  Visitors.allow({
+    insert: function (userId, doc){
+      // if(!userId) return false
+      if(!doc) return false
+      return true
+    },
+    update: function (userId, doc){
+      // if(!userId) return false
+      return true
+    }
+    // remove: function (userId, _id){
+    //   if(!userId) return false
+    // }
+  })
 })
   
 Meteor.methods({
@@ -24,7 +41,5 @@ Meteor.methods({
 })
 
 function macmessage(mac,ts,status){
-  //if(!mac || !ts || !status) return
-  Inmates.insert({'mac': mac,'ts':ts,'status':status})
-  return 'finished'
+  Visitors.manager(mac,ts,status)
 }
