@@ -7,3 +7,4 @@ standard-app-packages
 
 mocha-web-velocity
 velocity-html-reporter
+iron-router
