@@ -1,4 +1,5 @@
 Meteor.subscribe('inmates')
+Meteor.subscribe('visitors')
 
 Meteor.startup(function(){
   Router.map(function(){
@@ -7,6 +8,15 @@ Meteor.startup(function(){
       data: function(){
         return {
           inmates: Inmates.find({status:'online'}, {sort:{ts: -1}} ).fetch()
+        }
+      }
+    })
+    this.route('add', {
+      path: '/add/:mac',
+      data: function(){
+        var mac = this.params.mac
+        return {
+          mac: mac
         }
       }
     })

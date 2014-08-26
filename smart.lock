@@ -3,7 +3,6 @@
   "dependencies": {
     "basePackages": {
       "mocha-web-velocity": {},
-      "velocity-html-reporter": {},
       "iron-router": {}
     },
     "packages": {
@@ -11,11 +10,6 @@
         "git": "https://github.com/mad-eye/meteor-mocha-web.git",
         "tag": "v0.3.4",
         "commit": "5b68e18104c00687748b190b04a7752478472d17"
-      },
-      "velocity-html-reporter": {
-        "git": "https://github.com/rdickert/velocity-html-reporter.git",
-        "tag": "v0.1.5",
-        "commit": "741edd0caa8d0e491c53d597d34636f90cc64b88"
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
@@ -26,11 +20,6 @@
         "git": "https://github.com/xdissent/meteor-mirror.git",
         "tag": "v0.0.2",
         "commit": "03d965dcab2f976a1fdc6ce513edcd4c17b75746"
-      },
-      "velocity": {
-        "git": "https://github.com/xolvio/velocity.git",
-        "tag": "v0.1.19",
-        "commit": "5ccde8b9a72d8291f22fea9393821142d19a6d0a"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

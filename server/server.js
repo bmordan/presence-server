@@ -37,9 +37,10 @@ Meteor.startup(function () {
 })
   
 Meteor.methods({
-  macmessage: macmessage
+  syslog: syslog
 })
 
-function macmessage(mac,ts,status){
+function syslog(mac,ts,status){
   Visitors.manager(mac,ts,status)
+  return mac 
 }
