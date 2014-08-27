@@ -1,0 +1,10 @@
+<template name="add">
+  <div class="add">
+    <h1>Turn your Wifi On and Off</h1>    
+    <ul>
+      {{#each visitors}}
+        <li><a href="/sentence/{{this.mac}}">{{timeformat this.ts}} | {{this.mac}}</a></li>
+      {{/each}}  
+    </ul>
+  </div>
+</template>

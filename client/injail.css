@@ -1,0 +1,29 @@
+img{max-width:100%;}
+html, body{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+h1{
+  font-size: 24px;
+  margin: 0px;
+  text-align: center;
+}
+li{
+  list-style-type:none;
+  text-align:center;
+}
+#header{
+  background: url(/img/wall.png) top left no-repeat;
+  background-size: cover;
+  background-position: right top;
+  padding: 12px 0px 22px 12px;
+}
+#jail-logo{
+  width:25%;
+}
+#strap{
+  background: #2f2f2f;
+  color: #fff;
+  padding: 6px;
+}
