@@ -1,7 +1,6 @@
 Template.sentence.events({
-  'click input.submit' : function(evt, tpl){
+  'click input.add' : function(evt, tpl){
     evt.preventDefault()
-    
     var inmate = {
       mac: tpl.find('.mac').value,
       name: tpl.find('.name').value,
@@ -10,6 +9,7 @@ Template.sentence.events({
     }
     var check = Inmates.find({mac: tpl.find('.mac').value}).fetch()
     if(check.length === 0) Inmates.insert(inmate)
+    Router.go('injail')
   }
 })
 Template.sentence.events({

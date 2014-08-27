@@ -7,7 +7,7 @@ Meteor.startup(function(){
       path: '/',
       data: function(){
         return {
-          inmates: Inmates.find().fetch()
+         inmates: Inmates.find().fetch()
         }
       }
     })
@@ -28,6 +28,14 @@ Meteor.startup(function(){
         }
       }
     })
+    this.route('addphoto', {
+      path: '/addphoto',
+      data: function(){
+        return {
+          id: 'this.params._id'
+        }
+      }
+    })
   })//end of Router.map
   
   // Add route to body
@@ -40,4 +48,12 @@ Meteor.startup(function(){
       $body.addClass(currentRoute.route.name)
     }
   })
+})
+
+
+UI.registerHelper('timeformat', function(date){
+  return moment(date).format("h:mm:ss a")
+})
+UI.registerHelper('twist', function(date){
+  return Math.floor((Math.random() * 6) - 6)
 })

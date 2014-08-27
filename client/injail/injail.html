@@ -1,12 +1,21 @@
 <template name="injail">
-  <div class="jail">
+  
+  <div class="injail">
     {{#each inmates}}
-      <div class="cell">
-        fug
+      <div class="inmates">
+        <a href="/addphoto">
+          <img src="{{this.mugshots.face}}" class="mugshots">
+        </a>
+        <a href="/addphoto/{{this._id}}">
+          <img src="{{this.mugshots.profile}}" class="mugshots">
+        </a>
+      </div>
+      <div class="cards" style="transform: rotate({{twist}}deg)">
+        {{this.name}} last seen {{timeformat this.ts}}
       </div>
     {{/each}}
   </div>
-  <div>
-    <input type="button" value="Add" class="buttons">
+  <div class="injail add">
+    <input type="submit" value="Add" class="add">
   </div>
 </template>
