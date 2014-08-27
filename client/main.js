@@ -12,11 +12,19 @@ Meteor.startup(function(){
       }
     })
     this.route('add', {
-      path: '/add/:mac',
+      path: '/add',
       data: function(){
-        var mac = this.params.mac
+        var time = moment().subtract('60', 'seconds')
         return {
-          mac: mac
+          visitors: Visitors.find({ts: {$gt: time._d}},{sort: {ts: -1}}).fetch()
+        }
+      }
+    })
+    this.route('sentence', {
+      path: '/sentence/:mac',
+      data: function(){
+        return {
+          mac: this.params.mac
         }
       }
     })
