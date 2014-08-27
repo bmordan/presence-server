@@ -1,5 +1,10 @@
 <template name="addphoto">
-  <h1><i class="fa fa-camera-retro fa-5x"></i></h1>
+  <h1><i class="fa fa-camera-retro fa-3x"></i></h1>
   <h3>We need two photos from you</h3>
+  {{>upload}}
+</template>
 
+<template name="upload">
+  <input type="hidden"  id="id" value="{{id}}">
+  <input type="submit" class="upload" value="Photo 1">
 </template>

@@ -3,7 +3,7 @@
   <div class="injail">
     {{#each inmates}}
       <div class="inmates">
-        <a href="/addphoto">
+        <a href="/addphoto/{{this._id}}">
           <img src="{{this.mugshots.face}}" class="mugshots">
         </a>
         <a href="/addphoto/{{this._id}}">

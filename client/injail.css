@@ -48,6 +48,13 @@ input[type=submit]{
   border:none;
   margin: 50px auto 5px auto;
 }
+input[type=file]{
+  font-size: 25px;
+  overflow: hidden;
+  width:90%;
+  padding: 2%;
+  margin: 5px auto 5px auto; 
+}
 /* Static Header Items */
 #header{
   background: url(/img/wall.png) top left no-repeat;

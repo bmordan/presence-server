@@ -29,10 +29,10 @@ Meteor.startup(function(){
       }
     })
     this.route('addphoto', {
-      path: '/addphoto',
+      path: '/addphoto/:_id',
       data: function(){
         return {
-          id: 'this.params._id'
+          id: this.params._id
         }
       }
     })
@@ -52,7 +52,7 @@ Meteor.startup(function(){
 
 
 UI.registerHelper('timeformat', function(date){
-  return moment(date).format("h:mm:ss a")
+  return moment(date).format("h:mm a")
 })
 UI.registerHelper('twist', function(date){
   return Math.floor((Math.random() * 6) - 6)
