@@ -7,7 +7,7 @@ Meteor.startup(function(){
       path: '/',
       data: function(){
         return {
-          inmates: Inmates.find({status:'online'}, {sort:{ts: -1}} ).fetch()
+          inmates: Inmates.find().fetch()
         }
       }
     })

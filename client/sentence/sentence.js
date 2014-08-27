@@ -5,7 +5,7 @@ Template.sentence.events({
     var inmate = {
       mac: tpl.find('.mac').value,
       name: tpl.find('.name').value,
-      mugshots: {face: 'img/face.png', profile: 'img/profile.png'},
+      mugshots: {face: 'img/face.svg', profile: 'img/profile.svg'},
       twitter: null
     }
     var check = Inmates.find({mac: tpl.find('.mac').value}).fetch()
