@@ -1,4 +1,9 @@
 <template name="injail">
+  <div class="jail">
+    {{#each inmates}}
+      <li class="inmate">{{inmate}}</li>
+    {{/each}}
+  </div>
   <div>
     <input type="button" value="Add" class="buttons">
   </div>
