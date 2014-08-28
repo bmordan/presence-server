@@ -1,5 +1,9 @@
 <template name="jail">
-  {{>login}}  
+  {{#if currentUser}}
+    {{>inmates}}
+  {{else}}
+    {{>login}}
+  {{/if}}      
 </template>
 
 <template name="inmates">
@@ -21,6 +25,7 @@
   <div class="injail add">
     <input type="submit" value="Add" class="add">
   </div>
+  {{>login}}
 </template>
 
 <template name="login">
