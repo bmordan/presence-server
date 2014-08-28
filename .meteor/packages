@@ -5,7 +5,7 @@
 
 standard-app-packages
 
-iron-router
+iron:router
 mrt:moment
 accounts-twitter
 accounts-ui
