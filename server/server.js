@@ -1,8 +1,8 @@
 Meteor.publish('inmates', function(){
-  return Inmates.find({})
+  if(this.userId) return Inmates.find({})
 })
 Meteor.publish('visitors', function(){
-  return Visitors.find({})
+  if(this.userId) return Visitors.find({})
 })
 
 Meteor.startup(function () {
