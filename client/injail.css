@@ -85,10 +85,20 @@ input[type=file]{
   padding: 12px;
   box-shadow: 4px 3px 3px #888888;
   -ms-transform: rotate(-6deg); /* IE 9 */
-  -webkit-transform: rotate(-6deg); /* Chrome, Safari, Opera */
+  -webkit-transform: rotate(-6deg);
   transform: rotate(-6deg);
   margin: -68px 48px 0px 0px;
   float: right;  
+}
+.login{
+  width: 60%;
+  padding-top: 100px;
+  margin: auto;
+}
+#login-buttons{
+  width: 100%;
+  margin: auto;
+  text-align:center;
 }
 
 /* Responsive Stuff */

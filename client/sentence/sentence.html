@@ -1,8 +1,10 @@
 <template name="sentence">
   <div>
     <h3>{{mac}}</h3>
-    <input type="hidden" class="mac" value="{{mac}}">
-    <input type="text" name="name" class="name" placeholder="">
-    <input type="submit" class="add" value="Go To Jail">
+    <form>
+      <input type="hidden" class="mac" value="{{mac}}">
+      <input type="text" name="name" class="name" placeholder="Your Name" required="required">
+      <input type="submit" class="add" value="Go To Jail">
+    </form>
   </div>
 </template>

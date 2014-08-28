@@ -1,5 +1,8 @@
-<template name="injail">
-  
+<template name="jail">
+  {{>login}}  
+</template>
+
+<template name="inmates">
   <div class="injail">
     {{#each inmates}}
       <div class="inmates">
@@ -17,5 +20,11 @@
   </div>
   <div class="injail add">
     <input type="submit" value="Add" class="add">
+  </div>
+</template>
+
+<template name="login">
+  <div class="login">
+    {{>loginButtons}}
   </div>
 </template>

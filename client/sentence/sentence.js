@@ -9,13 +9,6 @@ Template.sentence.events({
     }
     var check = Inmates.find({mac: tpl.find('.mac').value}).fetch()
     if(check.length === 0) Inmates.insert(inmate)
-    Router.go('injail')
-  }
-})
-Template.sentence.events({
-  'blur' : function(evt, tpl){
-    evt.preventDefault()
-    var name = tpl.find('.name').value
-    if(name === '') tpl.find('.name').placeholder = 'ADD YOUR NAME!'
+    Router.go('jail')
   }
 })

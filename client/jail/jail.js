@@ -1,4 +1,4 @@
-Template.injail.events({
+Template.inmates.events({
   'click .add' : function (evt, tpl) {
     evt.preventDefault()
     Router.go('add')

@@ -3,7 +3,7 @@ Meteor.subscribe('visitors')
 
 Meteor.startup(function(){
   Router.map(function(){
-    this.route('injail', {
+    this.route('jail', {
       path: '/',
       data: function(){
         return {
