@@ -5,7 +5,8 @@ Template.sentence.events({
       mac: tpl.find('.mac').value,
       name: tpl.find('.name').value,
       mugshots: {face: 'img/face.svg', profile: 'img/profile.svg'},
-      twitter: null
+      twitter: null,
+      status: 'online'
     }
     var check = Inmates.find({mac: tpl.find('.mac').value}).fetch()
     if(check.length === 0) Inmates.insert(inmate)

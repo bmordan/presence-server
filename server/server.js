@@ -44,3 +44,7 @@ function syslog(mac,ts,status){
   Visitors.manager(mac,ts,status)
   return mac 
 }
+function service(userId){
+  var inmates = Inmates.find({}, {fields:{name: 1,status: 1}}).fetch()
+  return inmates
+}
