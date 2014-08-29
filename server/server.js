@@ -48,3 +48,12 @@ function service(){
   var inmates = Inmates.find({}, {fields:{name: 1,status: 1}}).fetch()
   return inmates
 }
+
+Accounts.validateLoginAttempt(function (info) {
+  var screenName = info.user.services.twitter.screenName.toLowerCase()
+  var admins = Meteor.settings && Meteor.settings.admins || []
+  if(admins.some( function(admin){return admin === screenName})) return true
+  var inmates = Inmates.find({ 'auth.twitter': screenName }).fetch()
+  if(inmates.length === 0) return false
+  return true
+})
