@@ -76,6 +76,11 @@ input[type=file]{
 #login-buttons-logout{
   margin:0px 0px 200px 0px;
 }
+#login-buttons{
+  width: 100%;
+  margin: auto;
+  text-align:center;
+}
 .inmates{
   border: dashed 5px #2f2f2f;
   margin:20px;
@@ -101,11 +106,7 @@ input[type=file]{
   padding-top: 100px;
   margin: auto;
 }
-#login-buttons{
-  width: 100%;
-  margin: auto;
-  text-align:center;
-}
+
 
 /* Responsive Stuff */
 @media screen and (max-width: 568px) {

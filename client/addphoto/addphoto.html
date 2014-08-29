@@ -6,8 +6,17 @@
 
 <template name="upload">
   <form>
-    <input type="hidden"  id="id" value="{{id}}">
-    <input type="file" id="file">
-    <input type="submit"  class="upload" value="Photo 1">
+    
+    <input type="file" id="face">
+    {{#if previewface}}
+      <img src="{{previewface}}" class="preview previewface" data-for="face">
+    {{/if}}
+    
+    <input type="file" id="profile">
+    {{#if previewprofile}}
+      <img src="{{previewprofile}}" class="preview previewprofile" data-for="profile">
+    {{/if}}
+    
+    <input type="submit"  class="upload" value="Save">
   </form>
 </template>
