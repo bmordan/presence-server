@@ -32,12 +32,15 @@ input{
   display: block;
 }
 input[type=text]{
-  font-size: 40px;
+  display: block;
+  height: 45px;
   width:76%;
-  padding: 2%;
+  font-size: 40px;
+  padding: 2.5px;
   margin: 5px auto 5px auto;
   border: solid 4px #ff0000;
 }
+input.placeholder{ font-size: 40px;}
 input[type=submit]{
   line-height: 60px;
   width:80%;
