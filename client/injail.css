@@ -73,6 +73,9 @@ input[type=file]{
   color: #fff;
   padding: 6px;
 }
+#login-buttons-logout{
+  margin:0px 0px 200px 0px;
+}
 .inmates{
   border: dashed 5px #2f2f2f;
   margin:20px;
