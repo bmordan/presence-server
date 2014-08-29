@@ -2,7 +2,7 @@
   {{#if currentUser}}
     {{>inmates}}
   {{else}}
-    {{>login}}
+    {{>loginButtons}}
   {{/if}}      
 </template>
 
@@ -16,20 +16,16 @@
         <a href="/addphoto/{{this._id}}">
           <img src="{{this.mugshots.profile}}" class="mugshots">
         </a>
-      </div>
-      <div class="cards" style="transform: rotate({{twist}}deg)">
-        {{this.name}} last seen {{timeformat this.ts}}
+        <div class="cards" style="transform: rotate({{twist}}deg)">
+          <span class="name">{{this.name}}</span>
+          <span class="updated">last seen {{timeformat this.ts}}</span>
+        </div>
       </div>
     {{/each}}
   </div>
-  <div class="injail add">
-    <input type="submit" value="Add" class="add">
-  </div>
-  {{>login}}
-</template>
 
-<template name="login">
-  <div class="login">
+  <footer>
     {{>loginButtons}}
-  </div>
+    <a href="/add">Add inmate</a>
+  </footer>
 </template>

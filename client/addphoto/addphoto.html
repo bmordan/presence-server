@@ -5,18 +5,26 @@
 </template>
 
 <template name="upload">
-  <form>
-    
-    <input type="file" id="face">
-    {{#if previewface}}
-      <img src="{{previewface}}" class="preview previewface" data-for="face">
-    {{/if}}
-    
-    <input type="file" id="profile">
-    {{#if previewprofile}}
+  <form class="upload">
+    <div class="inmates">
+      {{#if previewface}}
+      <a href="">
+        <img src="{{previewface}}" class="preview previewface" data-for="face">
+      </a>
+      {{/if}}
+
+      {{#if previewprofile}}
+      <a href="">
       <img src="{{previewprofile}}" class="preview previewprofile" data-for="profile">
-    {{/if}}
-    
+      </a>
+      {{/if}}
+
+      <div class="btns">
+        <input type="file" id="profile" style="display: inline; float:right">
+        <input type="file" id="face" style="display: inline;">
+
+      </div>
+    </div>
     <input type="submit"  class="upload" value="Save">
   </form>
 </template>

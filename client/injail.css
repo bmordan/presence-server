@@ -1,6 +1,7 @@
 /* GLOBALS */
 img{max-width:100%;}
 html, body{
+  min-height: 100%;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -10,7 +11,7 @@ html, body{
 h1,h3{
   text-align: center;
 }
-a:link, a:visited, a:hover, a:active{
+a{
   text-decoration: none;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #2f2f2f;
@@ -36,7 +37,7 @@ input[type=text]{
   height: 45px;
   width:76%;
   font-size: 40px;
-  padding: 2.5px;
+  line-height: 1.2;
   margin: 5px auto 5px auto;
   border: solid 4px #ff0000;
 }
@@ -51,12 +52,10 @@ input[type=submit]{
   border:none;
   margin: 50px auto 5px auto;
 }
-input[type=file]{
-  font-size: 25px;
-  overflow: hidden;
-  width:90%;
-  padding: 2%;
-  margin: 5px auto 5px auto; 
+
+.btns input[type=file]{
+  font-size: 24px;
+  width:40%;
 }
 /* Static Header Items */
 #header{
@@ -68,45 +67,91 @@ input[type=file]{
 #jail-logo{
   width:25%;
 }
-#strap{
+#strap, footer{
   background: #2f2f2f;
   color: #fff;
-  padding: 6px;
 }
-#login-buttons-logout{
-  margin:0px 0px 200px 0px;
+#strap h3 {
+  text-align: left;
+  padding-left: 4%;
+  font-weight: 100;
+  font-size: 18px;
+  margin: 0;
 }
-#login-buttons{
-  width: 100%;
-  margin: auto;
-  text-align:center;
+.injail{
+  min-height: 600px;
+}
+.inmates, .cards{
+  max-width: 400px;
 }
 .inmates{
-  border: dashed 5px #2f2f2f;
-  margin:20px;
+  display: inline-block;
+  border:solid 4px black;
+  margin:10px 2px;
+  background: #333;
+  font-size: 0;
+  position: relative;
 }
-.mugshots{
-  width:49%;
-  margin: 5px 0px 5px 0px;
+.inmates a{
+  display: inline-block;
+  width:50%;
+  margin:0;
+  padding:0;
+  vertical-align: top;
 }
 .cards{
-  display: inline-block;
+  display: block;
+  width:70%;
   border: solid 1px #000;
-  background: #fff;
-  padding: 12px;
-  box-shadow: 4px 3px 3px #888888;
-  -ms-transform: rotate(-6deg); /* IE 9 */
-  -webkit-transform: rotate(-6deg);
-  transform: rotate(-6deg);
-  margin: -68px 48px 0px 0px;
-  float: right;  
+  background: #222;
+  color:#eee;
+  padding: 2px;
+  box-shadow: 4px 3px 3px rgba(0,0,0,0.4);
+  margin:-3em 0 0 40px;
+  position: absolute;
+  bottom:0;
+}
+.cards span{
+  display: block;
+  padding:2px 8px;
+  font-family: impact, sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.cards .updated{
+  background-color: #333;
 }
 .login{
   width: 60%;
   padding-top: 100px;
   margin: auto;
 }
-
+footer{
+  padding: 4px 4%;
+  font-weight: 200;
+  color: white;
+}
+footer a, #login-buttons .login-button, .accounts-dialog .login-button {
+  color: white;
+  background-color: #911;
+  border-radius: 2px;
+  display: inline-block;
+  border:solid white 1px;
+  line-height: 1.5;
+  text-decoration: none;
+  font-size: 80%;
+  padding: 4px 8px;
+}
+footer a:hover, #login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+  text-decoration: none;
+  background: red;
+  color:white;
+}
+.upload{
+  text-align: center;
+}
 
 /* Responsive Stuff */
 @media screen and (max-width: 568px) {
@@ -115,5 +160,14 @@ input[type=file]{
 
 /* Expand the wrap a bit further on larger screens */
 @media screen and (min-width: 1180px) {
-
+  body:after{
+    content:'';
+    display:block;
+    position: fixed;
+    bottom:0;
+    right:0;
+    background: transparent url(/img/queenHalf.png) no-repeat;
+    min-width: 288px;
+    height:566px;
+  }
 }
