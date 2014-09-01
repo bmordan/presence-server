@@ -152,6 +152,9 @@ footer a:hover, #login-buttons .login-button:hover, .accounts-dialog .login-butt
 .upload{
   text-align: center;
 }
+.add .list.online {
+  border: solid 2px #2f2f2f;
+}
 
 /* Responsive Stuff */
 @media screen and (max-width: 568px) {
