@@ -69,8 +69,25 @@ input[type=submit] {
   background-position: right top;
   padding: 12px 0px 22px 12px;
 }
+#header nav {
+  display: inline-block;
+}
+#header nav a {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 15px;
+  background-color: rgba(255,255,255,0.9);
+}
+#header nav a:hover {
+  background-color: white;
+  text-decoration: none;
+}
 #jail-logo {
   width: 25%;
+  display: inline-block;
+}
+#jail-logo:hover {
+  background-color: white;
 }
 #strap, footer {
   background: #2f2f2f;
