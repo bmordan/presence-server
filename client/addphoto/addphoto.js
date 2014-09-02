@@ -4,31 +4,25 @@ Template.upload.events({
     var type = evt.target.id
     photoReader(type, evt)
   },
-  'click .preview' : function(evt, tpl){
-    evt.preventDefault()
-    var type = evt.target.dataset.for
-    console.log(evt)
-    $('#'+type).trigger('click')
-  },
   'submit' : function(evt, tpl){
     evt.preventDefault()
-    Inmates.update(this.id,
-      {$set: {mugshots: {
-        face: Session.get('previewface'),
-        profile: Session.get('previewprofile')
-      }
-    }})
+    var query = {}
+    if (Session.get('previewface')) query['mugshots.face'] = Session.get('previewface')
+    if (Session.get('previewprofile')) query['mugshots.profile'] = Session.get('previewprofile')
+    Inmates.update(this.id, { $set: query })
     Router.go('jail')
   }
-  
 })
 
 Template.upload.helpers({
-  'previewface' : function(){
+  'previewface' : function () {
     return Session.get('previewface')
   },
-  'previewprofile' : function(){
+  'previewprofile' : function () {
     return Session.get('previewprofile')
+  },
+  'inmate': function () {
+    return Inmates.findOne(this.id)
   }
 })
 

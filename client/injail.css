@@ -1,6 +1,9 @@
 /* GLOBALS */
-img{max-width:100%;}
-html, body{
+
+img {
+  max-width: 100%;
+}
+html, body {
   min-height: 100%;
   width: 100%;
   padding: 0px;
@@ -8,66 +11,68 @@ html, body{
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.1em;
 }
-h1,h3{
+h1, h3 {
   text-align: center;
 }
-a{
+a {
   text-decoration: none;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #2f2f2f;
 }
-.list{
-  display:block;
-  clear:both;
+.list {
+  display: block;
+  clear: both;
   width: 90%;
   text-align: center;
-  margin:12px auto 12px auto;
+  margin: 12px auto 12px auto;
   border: dashed 2px #2f2f2f;
   padding: 12px;
 }
-li{
-  list-style-type:none;
-  text-align:center;
+li {
+  list-style-type: none;
+  text-align: center;
 }
-input{
+input {
   display: block;
 }
-input[type=text]{
+input[type=text] {
   display: block;
   height: 45px;
-  width:76%;
+  width: 76%;
   font-size: 40px;
   line-height: 1.2;
   margin: 5px auto 5px auto;
   border: solid 4px #ff0000;
 }
-input.placeholder{ font-size: 40px;}
-input[type=submit]{
+input.placeholder {
+  font-size: 40px;
+}
+input[type=submit] {
   line-height: 60px;
-  width:80%;
+  width: 80%;
   max-width: 400px;
-  background:#ff0000;
-  color:#fff;
+  background: #ff0000;
+  color: #fff;
   font-size: 30px;
-  border:none;
+  border: none;
   margin: 50px auto 5px auto;
 }
-
-.btns input[type=file]{
+.btns input[type=file] {
   font-size: 24px;
-  width:40%;
+  width: 40%;
 }
 /* Static Header Items */
-#header{
+
+#header {
   background: url(/img/wall.png) top left no-repeat;
   background-size: cover;
   background-position: right top;
   padding: 12px 0px 22px 12px;
 }
-#jail-logo{
-  width:25%;
+#jail-logo {
+  width: 25%;
 }
-#strap, footer{
+#strap, footer {
   background: #2f2f2f;
   color: #fff;
 }
@@ -78,57 +83,58 @@ input[type=submit]{
   font-size: 18px;
   margin: 0;
 }
-.injail{
+.injail {
   min-height: 600px;
 }
-.inmates, .cards{
+.inmates, .cards {
   max-width: 400px;
 }
-.inmates{
+.inmates {
   display: inline-block;
-  border:solid 4px black;
-  margin:10px 2px;
+  border: solid 4px black;
+  margin: 10px 2px;
   background: #333;
   font-size: 0;
   position: relative;
+  text-align: left;
 }
-.inmates a{
+.inmates a {
   display: inline-block;
-  width:50%;
-  margin:0;
-  padding:0;
+  width: 50%;
+  margin: 0;
+  padding: 0;
   vertical-align: top;
 }
-.cards{
+.cards {
   display: block;
-  width:70%;
+  width: 70%;
   border: solid 1px #000;
   background: #222;
-  color:#eee;
+  color: #eee;
   padding: 2px;
-  box-shadow: 4px 3px 3px rgba(0,0,0,0.4);
-  margin:-3em 0 0 40px;
+  box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.4);
+  margin: -3em 0 0 40px;
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
-.cards span{
+.cards span {
   display: block;
-  padding:2px 8px;
+  padding: 2px 8px;
   font-family: impact, sans-serif;
   text-transform: uppercase;
   font-weight: 200;
   font-size: 16px;
   letter-spacing: 1px;
 }
-.cards .updated{
+.cards .updated {
   background-color: #333;
 }
-.login{
+.login {
   width: 60%;
   padding-top: 100px;
   margin: auto;
 }
-footer{
+footer {
   padding: 4px 4%;
   font-weight: 200;
   color: white;
@@ -138,7 +144,7 @@ footer a, #login-buttons .login-button, .accounts-dialog .login-button {
   background-color: #911;
   border-radius: 2px;
   display: inline-block;
-  border:solid white 1px;
+  border: solid white 1px;
   line-height: 1.5;
   text-decoration: none;
   font-size: 80%;
@@ -147,30 +153,62 @@ footer a, #login-buttons .login-button, .accounts-dialog .login-button {
 footer a:hover, #login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
   text-decoration: none;
   background: red;
-  color:white;
+  color: white;
 }
-.upload{
+.upload {
   text-align: center;
+}
+.upload .inmates .photos {
+
+}
+.upload .inmates .photos label {
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+.upload .inmates .photos label.face {
+  float: right;
+}
+.upload .btns {
+  min-width: 300px;
+  clear: both;
+}
+.upload .btns label {
+  width: 40%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin: 10px 5%;
+  font-weight: bold;
+  display: inline-block;
+}
+.upload .btns i.fa {
+  display: block;
+  text-align: center;
+  margin: 10px 0 5px;
+}
+.upload .btns input {
+  display: none;
 }
 .add .list.online {
   border: solid 2px #2f2f2f;
 }
-
 /* Responsive Stuff */
-@media screen and (max-width: 568px) {
 
-}
-
+@media screen and (max-width: 568px) {}
 /* Expand the wrap a bit further on larger screens */
+
 @media screen and (min-width: 1180px) {
-  body:after{
-    content:'';
-    display:block;
+  body:after {
+    content: '';
+    display: block;
     position: fixed;
-    bottom:0;
-    right:0;
+    bottom: 0;
+    right: 0;
     background: transparent url(/img/queenHalf.png) no-repeat;
     min-width: 288px;
-    height:566px;
+    height: 566px;
   }
 }

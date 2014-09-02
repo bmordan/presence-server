@@ -7,22 +7,43 @@
 <template name="upload">
   <form class="upload">
     <div class="inmates">
-      {{#if previewface}}
-      <a href="">
-        <img src="{{previewface}}" class="preview previewface" data-for="face">
-      </a>
-      {{/if}}
+      <div class="photos">
+        {{#if previewface}}
+        <label for="face" class="face">
+          <img src="{{previewface}}">
+        </label>
+        {{else}}
+          {{#if inmate.mugshots.face}}
+          <label for="face" class="face">
+            <img src="{{inmate.mugshots.face}}">
+          </label>
+          {{/if}}
+        {{/if}}
 
-      {{#if previewprofile}}
-      <a href="">
-      <img src="{{previewprofile}}" class="preview previewprofile" data-for="profile">
-      </a>
-      {{/if}}
+        {{#if previewprofile}}
+        <label for="profile" class="profile">
+          <img src="{{previewprofile}}">
+        </label>
+        {{else}}
+          {{#if inmate.mugshots.profile}}
+          <label for="profile" class="profile">
+            <img src="{{inmate.mugshots.profile}}">
+          </label>
+          {{/if}}
+        {{/if}}
+      </div>
 
       <div class="btns">
-        <input type="file" id="profile" style="display: inline; float:right">
-        <input type="file" id="face" style="display: inline;">
-
+        <label for="profile" class="upload-profile">
+          <span>Profile</span>
+          <i class="fa fa-upload"></i>
+          <input type="file" id="profile" title="">
+        </label>
+        <label for="face" class="upload-face">
+          <span>Front</span>
+          <i class="fa fa-upload"></i>
+          <input type="file" id="face" title="">
+        </label>
       </div>
     </div>
     <input type="submit"  class="upload" value="Save">
