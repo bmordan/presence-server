@@ -18,6 +18,7 @@ Meteor.startup(function () {
     },
     remove: function (userId, _id){
       if(!userId) return false
+      return true
     }
   })
   Visitors.allow({
@@ -32,6 +33,7 @@ Meteor.startup(function () {
     },
     remove: function (userId, _id){
       if(!userId) return false
+      return true
     }
   })
 })
